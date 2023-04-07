@@ -1,0 +1,300 @@
+* {
+  font-family: "Alexandria", sans-serif;
+}
+
+/* background-color: #0dcaf0; */
+::selection {
+  background-color: #00a6ed;
+  color: white;
+}
+
+body {
+  background-color: #eee;
+}
+
+body.dimmed {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+body.dimmed ::selection {
+  background-color: #00a6ed;
+  color: black;
+}
+
+body.dimmed .nav-link,
+body.dimmed .navbar-brand {
+  color: #fff;
+}
+
+body.dimmed .col {
+  border-color: #222 !important;
+}
+
+/* ################################## */
+/* ######## BOOTSTRAP CLASSES ####### */
+/* ################################## */
+
+.dropdown-menu {
+  transition: 1s;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color: #e0e1e2;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.dropdown-toggle:hover .navbar-expand-lg .navbar-nav .dropdown-menu {
+  display: block !important;
+}
+
+.dropdown-item {
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #00a6ed;
+  padding-left: 15px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ################################## */
+/* ############# HEADER ############# */
+/* ################################## */
+
+.container header {
+  display: none !important;
+}
+
+header {
+  border-bottom: 2px solid #ddd;
+  display: none !important;
+}
+
+header a {
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  color: #00a6ed !important;
+}
+
+/* ################################## */
+/* ############## NAVBAR ############ */
+/* ################################## */
+/* body {
+    height: 2000px;
+} */
+
+.navbar {
+  height: 55px !important;
+  background-color: #dbdbdb80;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000 !important;
+}
+
+.navbar-nav li {
+  /* border-bottom: 3px solid #00a6ed; */
+  transition: 0.3s;
+}
+.navbar-nav li:hover {
+  color: #00a6ed !important;
+}
+.navbar-nav li:hover a {
+  color: #00a6ed !important;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+  width: 60px !important;
+}
+
+/* ################################## */
+/* ############### HERO ############# */
+/* ################################## */
+
+.hero {
+  background-image: url("/images/hero/p1.jpg");
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 1rem;
+  padding: 10% 0;
+  color: white;
+  overflow: hidden;
+}
+
+.hero .topSection h1 {
+  font-size: 4rem !important;
+  line-height: 1.5;
+}
+
+.hero .left {
+  width: 70% !important;
+}
+
+/* ################################## */
+/* ############### BOXES ############ */
+/* ################################## */
+
+.box {
+  border-radius: 15px !important;
+  background: #e0e0e0;
+  transition: 0.3s ease;
+}
+
+.box:hover {
+  box-shadow: none;
+  transform: scale(1.05);
+}
+
+.box .icon {
+  background-color: #00a6ed72;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .categories{} */
+.categories .left {
+  background-color: #ddd;
+  max-height: 600px !important;
+  overflow: scroll !important;
+}
+
+.categories a {
+  width: 100%;
+  background-color: #00a6ed;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.categories a:hover {
+  transform: scale(0.96);
+}
+
+.categories .col-9 {
+  max-height: 600px !important;
+  overflow: auto;
+}
+
+.categories .books {
+  max-width: 500px;
+  overflow: hidden;
+}
+.categories .books img {
+  transition: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.categories .books img:hover {
+  transform: scale(0.96);
+  border-radius: 10px !important;
+}
+
+
+
+/* ############################################################### */
+/* ######################### MEDIA QUERY ######################### */
+/* ############################################################### */
+
+@media (max-width: 992px) {
+  .hero .left {
+    width: 70% !important;
+  }
+  .categories a {
+    font-size: 0.8rem;
+    margin: 0 3px;
+    width: 140px !important;
+    padding: 5px 4px !important;
+    background-color: #00a6ed;
+  }
+  .categories a p {
+    width: 70px !important;
+    text-align: center;
+  }
+  .categories a i {
+    display: none;
+  }
+
+  .navbar-collapse {
+    background-color: #0a3a4ef0;
+    padding: 10px;
+    top: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none;
+  }
+  .navbar-collapse ul{
+    display: flex !important;
+  }
+  .navbar i {
+    margin-left: 10px;
+    color: white;
+  }
+  .navbar .nav-link {
+    color: white;
+  }
+}
+@media (max-width: 768px) {
+  .hero .left {
+    width: 100% !important;
+  }
+  .hero .topSection h1 {
+    font-size: 2rem !important;
+  }
+  .hero .topSection p {
+    width: 100% !important;
+  }
+  .heroBoxes .box {
+    margin: 5px 0;
+  }
+  .heroBoxes .box .feature_title {
+    font-size: 1.2rem;
+  }
+  .categories {
+    position: relative;
+  }
+  .categories .left {
+    position: absolute;
+    top: -50px;
+    width: -webkit-fill-available;
+    width: 100%;
+    height: auto !important;
+  }
+  .main_books_container {
+    width: 100%;
+    margin-top: 8rem;
+  }
+  .categories_list {
+    display: flex;
+    overflow: scroll;
+  }
+
+
+
+
+}
+
+@media (max-width: 400px) {
+  .hero .left {
+    width: 100% !important;
+  }
+}
